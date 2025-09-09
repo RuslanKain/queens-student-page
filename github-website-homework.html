@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Queen’s Computing Student Page</title>
+    <meta name="description" content="A 20‑minute hands‑on lab: launch your own Queen’s School of Computing student webpage using GitHub Pages." />
+    <style>
+      :root {
+        --queens-red: #aa1e22;
+        --queens-gold: #f2a900;
+        --queens-blue: #002d72;
+        --text-light: #ffffff;
+        --text-dark: #1a1a1a;
+      }
+      body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; background: var(--queens-red); color: var(--text-light); }
+      .gold-bar { height: 10px; background: var(--queens-gold); }
+      header { background: var(--queens-blue); padding: 1rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-light); }
+      header h1 { margin: 0; font-size: 1.5rem; }
+      .hero { background: var(--queens-red); text-align: center; padding: 3rem 1rem; }
+      .hero h2 { font-size: 2rem; margin-bottom: .5rem; }
+      .hero p { max-width: 60ch; margin: 0 auto; }
+      main { background: #fff; color: var(--text-dark); padding: 2rem; max-width: 900px; margin: 2rem auto; border-radius: 12px; }
+      section { margin-bottom: 2rem; }
+      section h3 { color: var(--queens-blue); margin-bottom:.25rem; }
+      .time { font-size:.9rem; color:#475569; }
+      details { margin-top: .5rem; }
+      details summary { cursor: pointer; color: var(--queens-red); font-weight:600; }
+      code, pre { background: #f3f4f6; border: 1px solid #ddd; border-radius: 6px; padding: .4rem .6rem; font-family: ui-monospace, Consolas, monospace; }
+      footer { text-align: center; background: var(--queens-blue); color: var(--text-light); padding: 1.5rem; }
+      .callout { background:#fff7ed; border:1px solid #fed7aa; padding:.8rem; border-radius:8px; }
+    </style>
+  </head>
+  <body>
+    <div class="gold-bar"></div>
+    <header>
+      <h1>Queen’s School of Computing</h1>
+      <span>Student Webpage Tutorial</span>
+    </header>
+
+    <div class="hero">
+      <h2>Launch your own site in 20 minutes</h2>
+      <p>This tutorial guides complete beginners — no coding experience required — to create and deploy their personal Queen’s Computing student webpage.</p>
+    </div>
+
+    <main>
+      <section>
+        <h3>Step 0: Sign in (or create a GitHub account)</h3>
+        <p class="time">~1–2 minutes</p>
+        <ul>
+          <li>Go to GitHub and sign in. New? Click <b>Sign up</b> and choose the free plan.</li>
+          <li>Confirm your email so Pages can publish later.</li>
+          <li><b>Encouraged:</b> Apply for the <a href="https://education.github.com/pack" target="_blank">GitHub Student Developer Pack</a>. It gives free GitHub Pro and access to GitHub Copilot Chat (AI assistant) for free!</li>
+        </ul>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>No verification email?</b> Check spam or click <em>Resend verification</em>.</li>
+            <li><b>Forgot password?</b> Use <em>Forgot password</em> on the sign‑in page.</li>
+            <li><b>Student Pack rejected?</b> Re‑apply with your Queen’s email and a photo of your student card.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section>
+        <h3>Step 1: Create your repository</h3>
+        <p class="time">~2 minutes</p>
+        <ol>
+          <li>Click the <b>+</b> in the top bar → <b>New repository</b>.</li>
+          <li>Name it <code>queens‑student‑page</code> and check <b>Add a README</b>.</li>
+          <li>Choose <b>Public</b>, add <b>MIT License</b> → <b>Create repository</b>.</li>
+        </ol>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>Repo name taken?</b> Try <code>queens‑student‑page‑2025</code>.</li>
+            <li><b>Private repo?</b> GitHub Pages works only on Public (unless paid plan).</li>
+          </ul>
+        </details>
+      </section>
+
+      <section>
+        <h3>Step 2: Add your homepage</h3>
+        <p class="time">~4 minutes</p>
+        <p>Add a file named <code>index.html</code> at the root (main level) of the repo and paste:</p>
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"/&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;
+    &lt;title&gt;My Queen’s Student Page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"/&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;&lt;h1&gt;Welcome to My Page&lt;/h1&gt;&lt;/header&gt;
+    &lt;main&gt;
+      &lt;h2&gt;About Me&lt;/h2&gt;
+      &lt;p&gt;I am a student at Queen’s School of Computing.&lt;/p&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>Where to place?</b> The file should be at the top level of your repo, not inside a folder.</li>
+            <li><b>Wrong name?</b> Must be exactly <code>index.html</code>.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section>
+        <h3>Step 3: Add Queen’s branding (style.css)</h3>
+        <p class="time">~3 minutes</p>
+        <p>Create a file named <code>style.css</code> (at the same level as <code>index.html</code>) and paste:</p>
+        <pre><code>:root{--red:#aa1e22;--gold:#f2a900;--blue:#002d72}
+body{font-family:system-ui,sans-serif;margin:0;background:var(--red);color:#fff}
+header{background:var(--blue);color:#fff;padding:1rem}
+main{background:#fff;color:#1a1a1a;max-width:900px;margin:2rem auto;border-radius:12px;padding:1.5rem}
+a{color:var(--blue)}
+</code></pre>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>Not working?</b> Ensure <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> is in the <code>&lt;head&gt;</code> of <code>index.html</code>.</li>
+            <li><b>Colors look off?</b> Double‑check the hex codes.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section>
+        <h3>Step 4: Enable GitHub Pages</h3>
+        <p class="time">~3 minutes</p>
+        <ol>
+          <li>Go to <b>Settings → Pages</b>.</li>
+          <li>Set <b>Source</b> → <b>Deploy from a branch</b>.</li>
+          <li>Choose Branch <code>main</code>, Folder <code>/root</code> → <b>Save</b>.</li>
+          <li>Wait for the green check, then open the link.</li>
+        </ol>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>404?</b> Wait a minute and refresh.</li>
+            <li><b>No URL?</b> Confirm repo is Public and branch/folder are set.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section>
+        <h3>Step 5: Personalize & publish updates</h3>
+        <p class="time">~6–7 minutes</p>
+        <p>You have two options:</p>
+        <ol>
+          <li><b>Manual edits:</b> Open <code>index.html</code> and add sections:
+            <pre><code>&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Project 1&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;p&gt;Email me at student@queensu.ca&lt;/p&gt;</code></pre>
+            Upload images (drag to repo) and use <code>&lt;img src="filename.jpg" alt="me" /&gt;</code>.
+          </li>
+          <li><b>With Copilot Chat:</b> Once you activate your GitHub Student Pack, open VS Code with Copilot Chat. Ask in plain English, e.g., “Add a section to show my favorite courses styled with Queen’s colors.” Copilot will suggest HTML+CSS changes.
+          </li>
+        </ol>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>Image not showing?</b> Must be in the repo root and path must match filename exactly.</li>
+            <li><b>Unsure how to phrase to Copilot?</b> Be specific: “Add a gold button that links to my LinkedIn.”</li>
+            <li><b>Copilot changes in wrong place?</b> Ask it: “Put this inside &lt;main&gt; under the About Me section.”</li>
+          </ul>
+        </details>
+        <div class="callout"><b>Congrats!</b> You now have a live, customizable student page — and you can use Copilot as your assistant to expand it further.</div>
+      </section>
+
+      <section>
+        <h3>Optional: Make changes via a Pull Request (Code Review)</h3>
+        <p class="time">bonus 5–7 minutes</p>
+        <ol>
+          <li>Edit a file, choose “Create a new branch” → name it <code>feature/about-update</code>.</li>
+          <li>Click <b>Propose changes</b> → <b>Create pull request</b>.</li>
+          <li>Review → Merge → Delete branch.</li>
+        </ol>
+        <details><summary>Tips & fixes</summary>
+          <ul>
+            <li><b>Merge blocked?</b> Confirm PR targets <code>main</code>.</li>
+            <li><b>Conflict?</b> Use GitHub’s Resolve conflicts editor.</li>
+          </ul>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      © Queen’s University — Student Page Tutorial. Built with GitHub Pages.
+    </footer>
+  </body>
+</html>
