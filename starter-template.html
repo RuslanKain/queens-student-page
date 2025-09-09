@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Queen's Student Card</title>
+    <link rel="stylesheet" href="student-card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="student-card">
+        <!-- Step 1: Add your header information -->
+        <div class="card-header">
+            <div class="photo-section">
+                <div class="profile-photo">
+                    <!-- Replace this with your photo -->
+                    <div class="photo-placeholder">
+                        <span>📸</span>
+                    </div>
+                </div>
+                <div class="queens-logo">
+                    <span>👑</span>
+                </div>
+            </div>
+            <div class="basic-info">
+                <!-- Replace with your information -->
+                <h1>Your Name</h1>
+                <p class="student-id">Student ID: 20XXXXXX</p>
+                <p class="program">Your Program</p>
+                <p class="year">Year X</p>
+            </div>
+        </div>
+
+        <!-- Step 2: Add your academic information -->
+        <div class="academic-info">
+            <h2>📊 Academic Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Faculty:</span>
+                    <span class="value">Your Faculty</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">GPA:</span>
+                    <span class="value">X.XX</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Major:</span>
+                    <span class="value">Your Major</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Minor:</span>
+                    <span class="value">Your Minor</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Add your achievements (optional) -->
+        <div class="achievements">
+            <h2>🏆 Achievements</h2>
+            <div class="achievement-list">
+                <div class="achievement">
+                    <span class="achievement-icon">🥇</span>
+                    <span class="achievement-text">Your Achievement 1</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">💻</span>
+                    <span class="achievement-text">Your Achievement 2</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">📚</span>
+                    <span class="achievement-text">Your Achievement 3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Add your interests -->
+        <div class="interests">
+            <h2>🎯 Interests & Goals</h2>
+            <div class="interest-tags">
+                <!-- Add or remove tags as needed -->
+                <span class="tag">Interest 1</span>
+                <span class="tag">Interest 2</span>
+                <span class="tag">Interest 3</span>
+                <span class="tag">Hobby 1</span>
+                <span class="tag">Hobby 2</span>
+            </div>
+        </div>
+
+        <!-- Step 5: Add your contact information -->
+        <div class="contact-info">
+            <h2>📱 Connect</h2>
+            <div class="social-links">
+                <!-- Replace # with your actual links -->
+                <a href="#" class="social-link">
+                    <span class="social-icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">💻</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Step 6: Add a fun fact about yourself -->
+        <div class="fun-fact">
+            <h2>🎵 Fun Fact</h2>
+            <p>"Add a fun fact about yourself here! It could be a hobby, talent, or interesting experience."</p>
+        </div>
+
+        <!-- Footer (you can customize this too) -->
+        <div class="card-footer">
+            <p class="university">Queen's University • Kingston, ON</p>
+            <p class="created-date">Created: January 2025</p>
+        </div>
+    </div>
+
+    <!-- Control buttons (optional) -->
+    <div class="card-controls">
+        <button onclick="window.print()" class="control-btn">🖨️ Print Card</button>
+        <button onclick="shareCard()" class="control-btn">📤 Share</button>
+    </div>
+
+    <script>
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Queen\'s Student Card',
+                    text: 'Check out my personalized Queen\'s University student card!',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+            }
+        }
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoItems = document.querySelectorAll('.info-item');
+            const achievements = document.querySelectorAll('.achievement');
+            
+            // Add hover effect to info items
+            infoItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add click animation to achievements
+            achievements.forEach(achievement => {
+                achievement.addEventListener('click', function() {
+                    this.style.animation = 'bounce 0.6s ease';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

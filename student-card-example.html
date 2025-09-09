@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Smith - Queen's Student Card</title>
+    <link rel="stylesheet" href="student-card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="student-card">
+        <div class="card-header">
+            <div class="photo-section">
+                <div class="profile-photo">
+                    <div class="photo-placeholder">
+                        <span>📸</span>
+                    </div>
+                </div>
+                <div class="queens-logo">
+                    <span>👑</span>
+                </div>
+            </div>
+            <div class="basic-info">
+                <h1>Alex Smith</h1>
+                <p class="student-id">Student ID: 20XXXXXX</p>
+                <p class="program">Computer Science</p>
+                <p class="year">Year 3</p>
+            </div>
+        </div>
+
+        <div class="academic-info">
+            <h2>📊 Academic Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Faculty:</span>
+                    <span class="value">Arts & Science</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">GPA:</span>
+                    <span class="value">3.7</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Major:</span>
+                    <span class="value">Computing</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Minor:</span>
+                    <span class="value">Mathematics</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="achievements">
+            <h2>🏆 Achievements</h2>
+            <div class="achievement-list">
+                <div class="achievement">
+                    <span class="achievement-icon">🥇</span>
+                    <span class="achievement-text">Dean's List 2023</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">💻</span>
+                    <span class="achievement-text">Hackathon Winner</span>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">📚</span>
+                    <span class="achievement-text">Research Assistant</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="interests">
+            <h2>🎯 Interests & Goals</h2>
+            <div class="interest-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Web Development</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Basketball</span>
+                <span class="tag">Photography</span>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h2>📱 Connect</h2>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <span class="social-icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">💻</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="fun-fact">
+            <h2>🎵 Fun Fact</h2>
+            <p>"I can solve a Rubik's cube in under 2 minutes and I've visited 15 countries!"</p>
+        </div>
+
+        <div class="card-footer">
+            <p class="university">Queen's University • Kingston, ON</p>
+            <p class="created-date">Created: January 2025</p>
+        </div>
+    </div>
+
+    <div class="card-controls">
+        <button onclick="window.print()" class="control-btn">🖨️ Print Card</button>
+        <button onclick="shareCard()" class="control-btn">📤 Share</button>
+        <a href="index.html" class="control-btn">← Back to Tutorial</a>
+    </div>
+
+    <script>
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My Queen\'s Student Card',
+                    text: 'Check out my personalized Queen\'s University student card!',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+            }
+        }
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.student-card');
+            const infoItems = document.querySelectorAll('.info-item');
+            const achievements = document.querySelectorAll('.achievement');
+            
+            // Add hover effect to info items
+            infoItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add click animation to achievements
+            achievements.forEach(achievement => {
+                achievement.addEventListener('click', function() {
+                    this.style.animation = 'bounce 0.6s ease';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

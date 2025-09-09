@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's University Student Card Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🎓 Queen's Student Card Tutorial</h1>
+            <p>Learn to create your own personalized university student website</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="intro">
+                <h2>Welcome to the Tutorial!</h2>
+                <p>In this tutorial, you'll learn how to create a beautiful, personalized student card website that showcases your university experience. Perfect for portfolios, sharing with friends, or just having fun with web development!</p>
+                
+                <div class="preview">
+                    <h3>What you'll build:</h3>
+                    <div class="card-preview">
+                        <iframe src="student-card-example.html" width="100%" height="400"></iframe>
+                    </div>
+                    <a href="student-card-example.html" target="_blank" class="preview-link">👀 View full example</a>
+                </div>
+            </section>
+
+            <section class="tutorial-steps">
+                <h2>📚 Tutorial Steps</h2>
+                
+                <div class="step">
+                    <h3>Step 1: Set Up Your HTML Structure</h3>
+                    <p>We'll start by creating the basic HTML structure for your student card.</p>
+                    <div class="code-block">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Queen's Student Card&lt;/title&gt;
+    &lt;link rel="stylesheet" href="student-card.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="student-card"&gt;
+        &lt;!-- Your content will go here --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 2: Add Your Personal Information</h3>
+                    <p>Create the header section with your photo and basic info.</p>
+                    <div class="code-block">
+                        <pre><code>&lt;div class="card-header"&gt;
+    &lt;div class="photo-section"&gt;
+        &lt;img src="your-photo.jpg" alt="Your Name" class="profile-photo"&gt;
+    &lt;/div&gt;
+    &lt;div class="basic-info"&gt;
+        &lt;h1&gt;Your Name&lt;/h1&gt;
+        &lt;p class="student-id"&gt;Student ID: 20XXXXXX&lt;/p&gt;
+        &lt;p class="program"&gt;Your Program&lt;/p&gt;
+        &lt;p class="year"&gt;Year X&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 3: Add Academic Information</h3>
+                    <p>Include your academic details and achievements.</p>
+                    <div class="code-block">
+                        <pre><code>&lt;div class="academic-info"&gt;
+    &lt;h2&gt;📊 Academic Information&lt;/h2&gt;
+    &lt;div class="info-grid"&gt;
+        &lt;div class="info-item"&gt;
+            &lt;span class="label"&gt;Faculty:&lt;/span&gt;
+            &lt;span class="value"&gt;Your Faculty&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="info-item"&gt;
+            &lt;span class="label"&gt;GPA:&lt;/span&gt;
+            &lt;span class="value"&gt;X.XX&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 4: Style Your Card with CSS</h3>
+                    <p>Now let's make it look great! Create a CSS file to style your student card.</p>
+                    <div class="code-block">
+                        <pre><code>.student-card {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 5: Add Interactive Elements</h3>
+                    <p>Make your card interactive with hover effects and animations.</p>
+                    <div class="code-block">
+                        <pre><code>.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 6: Customize and Personalize</h3>
+                    <p>Add your own touches! Consider adding:</p>
+                    <ul>
+                        <li>🎨 Your favorite colors or Queen's colors</li>
+                        <li>🏆 Achievements and awards</li>
+                        <li>📚 Favorite courses or professors</li>
+                        <li>🎯 Career goals or interests</li>
+                        <li>📱 Social media links</li>
+                        <li>🎵 Fun facts about yourself</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2>🔗 Helpful Resources</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3>HTML & CSS Basics</h3>
+                        <p>New to web development? Check out these beginner-friendly resources.</p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Color Schemes</h3>
+                        <p>Find beautiful color combinations for your student card.</p>
+                        <a href="https://coolors.co" target="_blank">Coolors.co</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Free Photos</h3>
+                        <p>Need a professional photo? Find free stock photos here.</p>
+                        <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="get-started">
+                <h2>🚀 Ready to Get Started?</h2>
+                <p>Download the starter template and begin creating your own student card!</p>
+                <div class="action-buttons">
+                    <a href="starter-template.html" download class="btn btn-primary">📥 Download Starter Template</a>
+                    <a href="student-card-example.html" target="_blank" class="btn btn-secondary">👀 View Example</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for Queen's University students | <a href="https://github.com/RuslanKain/queens-online-student-card-tutorial">View on GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
