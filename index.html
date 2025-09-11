@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Queen’s School of Computing Student Page</title>
-    <meta name="description" content="A 20‑minute hands‑on lab: launch your own Queen’s School of Computing student webpage using GitHub Pages." />
+    <title>Queen’s Computing Student Page</title>
+    <meta name="description" content="A 20‑minute hands-on lab: launch your own Queen’s School of Computing student webpage using GitHub Pages, then complete a peer review." />
     <style>
       :root {
         --queens-red: #aa1e22;
@@ -20,30 +20,48 @@
       .hero { background: var(--queens-red); text-align: center; padding: 3rem 1rem; }
       .hero h2 { font-size: 2rem; margin-bottom: .5rem; }
       .hero p { max-width: 60ch; margin: 0 auto; }
-      main { background: #fff; color: var(--text-dark); padding: 2rem; max-width: 900px; margin: 2rem auto; border-radius: 12px; }
+      main { background: #fff; color: var(--text-dark); padding: 2rem; max-width: 980px; margin: 2rem auto; border-radius: 12px; }
       section { margin-bottom: 2rem; }
       section h3 { color: var(--queens-blue); margin-bottom:.25rem; }
       .time { font-size:.9rem; color:#475569; }
       details { margin-top: .5rem; }
       details summary { cursor: pointer; color: var(--queens-red); font-weight:600; }
-      code, pre { background: #f3f4f6; border: 1px solid #ddd; border-radius: 6px; padding: .4rem .6rem; font-family: ui-monospace, Consolas, monospace; }
+      code { font-family: ui-monospace, Consolas, monospace; }
+      pre { background: #f3f4f6; border: 1px solid #ddd; border-radius: 6px; padding: .8rem; overflow: auto; max-width: 100%; }
+      pre code { white-space: pre; display:block; }
       footer { text-align: center; background: var(--queens-blue); color: var(--text-light); padding: 1.5rem; }
       .callout { background:#fff7ed; border:1px solid #fed7aa; padding:.8rem; border-radius:8px; }
+      .checklist { list-style: none; padding-left:0; }
+      .checklist li { margin:.25rem 0; }
+      .card { border:1px solid #e5e7eb; border-radius:10px; padding:1rem; background:#fafafa; }
     </style>
   </head>
   <body>
     <div class="gold-bar"></div>
     <header>
       <h1>Queen’s School of Computing</h1>
-      <span>Student Webpage Tutorial</span>
+      <span>Student Webpage Tutorial + Peer Review</span>
     </header>
 
     <div class="hero">
       <h2>Launch your own site in 20 minutes</h2>
-      <p>This tutorial guides complete beginners — no coding experience required — to create and deploy their personal Queen’s Computing student webpage.</p>
+      <p>This tutorial guides you — no coding experience required — to create and deploy a personal Queen’s Computing student webpage and complete a simple peer code review.</p>
     </div>
 
     <main>
+      <section>
+        <h3>What to Submit (deliverables on OnQ)</h3>
+        <p class="time">Submit to OnQ once you finish all steps</p>
+        <ul>
+          <li><b>Live URL</b>: link to your deployed site (to check successful launch).</li>
+          <li><b>Repository link</b>: link to your GitHub repo with code.</li>
+          <li><b>Peer review evidence</b>: paste the direct URL of your review on your partner’s repo. This can be either:<ul><li>a Pull Request link (e.g. <code>https://github.com/partner-username/queens-student-page/pull/3</code>) if you reviewed via PR</li><li>or an Issue link (e.g. <code>https://github.com/partner-username/queens-student-page/issues/5</code>) if you used the issue template</li></ul></li>
+          <li><b>Screenshots</b>: 2 images (the site + your comments/review).</li>
+          <li><b>Summary</b>: 3 sentences — biggest win, one quick fix, one nice‑to‑have.</li>
+        </ul>
+        <div class="callout"><b>Reminder:</b> These are required deliverables. This homework is not graded, but feedback will be provided. Your website must be launched successfully so we can give you meaningful feedback.</div>
+      </section>
+
       <section>
         <h3>Step 0: Sign in (or create a GitHub account)</h3>
         <p class="time">~1–2 minutes</p>
@@ -80,26 +98,45 @@
       <section>
         <h3>Step 2: Add your homepage</h3>
         <p class="time">~4 minutes</p>
-        <p>Add a file named <code>index.html</code> at the root (main level) of the repo and paste:</p>
+        <p>Add a file named <code>index.html</code> at the root (main level) of the repo and paste this starter. The <b>green comments</b> show where to personalize.</p>
         <pre><code>&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"/&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"/&gt;
     &lt;title&gt;My Queen’s Student Page&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"/&gt;
+    &lt;link rel="stylesheet" href="style.css"/&gt; &lt;!-- do not change this line --&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;header&gt;&lt;h1&gt;Welcome to My Page&lt;/h1&gt;&lt;/header&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Welcome to My Page&lt;/h1&gt; &lt;!-- change this heading to your name --&gt;
+    &lt;/header&gt;
+
     &lt;main&gt;
+      &lt;!-- ====== ABOUT SECTION (edit the text) ====== --&gt;
       &lt;h2&gt;About Me&lt;/h2&gt;
-      &lt;p&gt;I am a student at Queen’s School of Computing.&lt;/p&gt;
+      &lt;p&gt;I am a student at Queen’s School of Computing. I’m interested in &lt;!-- replace with interests --&gt;.&lt;/p&gt;
+
+      &lt;!-- ====== PHOTO (upload me.jpg to repo root, then update src) ====== --&gt;
+      &lt;img src="me.jpg" alt="Your Name portrait" width="240" height="240" /&gt;
+
+      &lt;!-- ====== PROJECTS (add or rename items) ====== --&gt;
+      &lt;h2&gt;Projects&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Project One — one sentence description.&lt;/li&gt;
+        &lt;li&gt;Project Two — coming soon.&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;!-- ====== CONTACT (update your links) ====== --&gt;
+      &lt;h2&gt;Contact&lt;/h2&gt;
+      &lt;p&gt;Email: &lt;a href="mailto:student@queensu.ca"&gt;student@queensu.ca&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;LinkedIn: &lt;a href="#"&gt;add your link here&lt;/a&gt;&lt;/p&gt;
     &lt;/main&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         <details><summary>Tips & fixes</summary>
           <ul>
-            <li><b>Where to place?</b> The file should be at the top level of your repo, not inside a folder.</li>
+            <li><b>Where to place?</b> The file is at the top level of your repo, not inside a folder.</li>
             <li><b>Wrong name?</b> Must be exactly <code>index.html</code>.</li>
           </ul>
         </details>
@@ -109,16 +146,24 @@
         <h3>Step 3: Add Queen’s branding (style.css)</h3>
         <p class="time">~3 minutes</p>
         <p>Create a file named <code>style.css</code> (at the same level as <code>index.html</code>) and paste:</p>
-        <pre><code>:root{--red:#aa1e22;--gold:#f2a900;--blue:#002d72}
-body{font-family:system-ui,sans-serif;margin:0;background:var(--red);color:#fff}
-header{background:var(--blue);color:#fff;padding:1rem}
-main{background:#fff;color:#1a1a1a;max-width:900px;margin:2rem auto;border-radius:12px;padding:1.5rem}
-a{color:var(--blue)}
+        <pre><code>:root {
+  --red:#aa1e22; --gold:#f2a900; --blue:#002d72;
+}
+body { font-family: system-ui, sans-serif; margin:0; background:var(--red); color:#fff; }
+header { background:var(--blue); color:#fff; padding:1rem; }
+main { background:#fff; color:#1a1a1a; max-width:900px; margin:2rem auto; border-radius:12px; padding:1.5rem; }
+a { color: var(--blue); }
+/* === personalize below by changing colors or spacing === */
+/* example: make headings blue and a bit larger */
+h2 { color: var(--blue); font-size: 1.6rem; }
+/* example: make your photo round */
+img { border-radius: 12px; }
 </code></pre>
         <details><summary>Tips & fixes</summary>
           <ul>
-            <li><b>Not working?</b> Ensure <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> is in the <code>&lt;head&gt;</code> of <code>index.html</code>.</li>
+            <li><b>Not working?</b> Ensure <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> is inside <code>&lt;head&gt;</code> of <code>index.html</code>.</li>
             <li><b>Colors look off?</b> Double‑check the hex codes.</li>
+            <li><b>Long code lines overflow?</b> Scroll the code block; boxes now scroll horizontally if needed.</li>
           </ul>
         </details>
       </section>
@@ -145,46 +190,163 @@ a{color:var(--blue)}
         <p class="time">~6–7 minutes</p>
         <p>You have two options:</p>
         <ol>
-          <li><b>Manual edits:</b> Open <code>index.html</code> and add sections:
-            <pre><code>&lt;h2&gt;Projects&lt;/h2&gt;
-&lt;ul&gt;&lt;li&gt;Project 1&lt;/li&gt;&lt;/ul&gt;
-
-&lt;h2&gt;Contact&lt;/h2&gt;
-&lt;p&gt;Email me at student@queensu.ca&lt;/p&gt;</code></pre>
-            Upload images (drag to repo) and use <code>&lt;img src="filename.jpg" alt="me" /&gt;</code>.
+          <li><b>Manual edits:</b> Open <code>index.html</code>. Use the existing structure and follow these instructions:
+            <ul>
+              <li><b>Change the page title:</b> In the <code>&lt;title&gt;</code> tag inside <code>&lt;head&gt;</code>, replace <code>My Queen’s Student Page</code> with your own name.</li>
+              <li><b>Header with your name:</b> Find <code>&lt;h1&gt;Welcome to My Page&lt;/h1&gt;</code> and replace the text with your name.</li>
+              <li><b>About Me:</b> In <code>&lt;main&gt;</code>, replace the sample paragraph with a few sentences about yourself.</li>
+              <li><b>Add a photo:</b> Upload an image (e.g., <code>me.jpg</code>) to repo root. Then add:
+                <pre><code>&lt;img src="me.jpg" alt="Photo of Your Name" width="240" height="240" /&gt;</code></pre>
+              </li>
+              <li><b>Projects:</b> After About section:
+                <pre><code>&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Project One — one sentence description.&lt;/li&gt;
+  &lt;li&gt;Project Two — coming soon.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </li>
+              <li><b>Contact:</b> At bottom of <code>&lt;main&gt;</code>:
+                <pre><code>&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;p&gt;Email: &lt;a href="mailto:student@queensu.ca"&gt;student@queensu.ca&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;LinkedIn: &lt;a href="https://linkedin.com/in/yourprofile"&gt;linkedin.com/in/yourprofile&lt;/a&gt;&lt;/p&gt;</code></pre>
+              </li>
+            </ul>
           </li>
-          <li><b>With Copilot Chat:</b> Once you activate your GitHub Student Pack, open VS Code with Copilot Chat. Ask in plain English, e.g., “Add a section to show my favorite courses styled with Queen’s colors.” Copilot will suggest HTML+CSS changes.
-          </li>
+          <li><b>With Copilot Chat:</b> After the Student Pack is active, in VS Code ask Copilot to personalize your page, e.g., “Insert my name into the page title and header.”</li>
         </ol>
         <details><summary>Tips & fixes</summary>
           <ul>
-            <li><b>Image not showing?</b> Must be in the repo root and path must match filename exactly.</li>
-            <li><b>Unsure how to phrase to Copilot?</b> Be specific: “Add a gold button that links to my LinkedIn.”</li>
-            <li><b>Copilot changes in wrong place?</b> Ask it: “Put this inside &lt;main&gt; under the About Me section.”</li>
+            <li><b>Image not showing?</b> Ensure file is uploaded at repo root and filename matches exactly.</li>
+            <li><b>Broken layout?</b> Keep new sections inside <code>&lt;main&gt;...&lt;/main&gt;</code>.</li>
           </ul>
         </details>
-        <div class="callout"><b>Congrats!</b> You now have a live, customizable student page — and you can use Copilot as your assistant to expand it further.</div>
+        <div class="callout"><b>Congrats!</b> You now have a live, customizable student page.</div>
       </section>
 
       <section>
-        <h3>Optional: Make changes via a Pull Request (Code Review)</h3>
-        <p class="time">bonus 5–7 minutes</p>
+        <h3>Step 6: Pair up & peer review (homework) — full instructions</h3>
+        <p class="time">~20–25 minutes total (10–12 per partner)</p>
+
+        <div class="card">
+          <h4 style="margin-top:0;color:var(--queens-blue)">A) Invite your partner (so they can be assigned as reviewer)</h4>
+          <ol>
+            <li>Open <b>your</b> repo → <b>Settings</b> → <b>Collaborators and teams</b> (sometimes shown as <em>Manage access</em>).</li>
+            <li>Click <b>Add people</b> → type your partner’s GitHub username → <b>Add</b>.</li>
+            <li>Your partner must <b>accept the email/in-app invite</b>. (Without accepting, they can still comment, but you can’t formally assign them as a reviewer.)</li>
+          </ol>
+          <details><summary>Tips</summary>
+            <ul>
+              <li>Public repos allow comments from anyone; adding as collaborator enables formal <em>Review</em> assignments and suggestion commits.</li>
+              <li>If <em>Collaborators and teams</em> isn’t visible, ensure you’re the repo owner.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h4 style="margin-top:0;color:var(--queens-blue)">B) Create a “review PR” in your repo</h4>
+          <ol>
+            <li>On the <b>Code</b> tab, open the branch dropdown (it says <code>main</code>) → type <code>peer-review-prep</code> → <b>Create branch</b>.</li>
+            <li>Edit a tiny thing in <code>index.html</code> (e.g., add a comment <code>&lt;!-- TODO: improve About text --&gt;</code>) → <b>Commit</b>.</li>
+            <li>Click the yellow banner <b>“Compare &amp; pull request”</b> → title: <code>Peer Review: &lt;Your Name&gt;</code>.</li>
+            <li>In the PR description, paste your live URL + any questions you have for the reviewer.</li>
+            <li>On the right side, under <b>Reviewers</b>, assign your partner (after they accepted the invite).</li>
+          </ol>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h4 style="margin-top:0;color:var(--queens-blue)">C) Partner: find the PR and leave a review</h4>
+          <ol>
+            <li>Go to your partner’s repo → <b>Pull requests</b> tab → open the PR titled <em>Peer Review: ...</em></li>
+            <li>Click <b>Files changed</b> → hover a line → click the blue <b>+</b> to add a comment on that exact spot.</li>
+            <li>To suggest an edit, click <b>Insert a suggestion</b> (the UI button) → type the corrected code or text → <b>Add review comment</b>.</li>
+            <li>Use the <b>Conversation</b> tab for general notes (e.g., broken link, contrast issue) and include a screenshot if helpful.</li>
+            <li>When you’ve left at least 5 comments (see checklist below), click <b>Review changes</b> (top-right) → choose <b>Comment</b> or <b>Approve</b> (or <b>Request changes</b> if something must be fixed) → <b>Submit review</b>.</li>
+          </ol>
+          <details><summary>Review tips</summary>
+            <ul>
+              <li>Be specific: reference headings, lines, or file names (e.g., “in <code>index.html</code>, under <code>&lt;h2&gt;Projects&lt;/h2&gt;</code> ...”).</li>
+              <li>Prefer actionable text or a code snippet over vague advice.</li>
+              <li>Keep tone kind and professional. Review the <em>work</em>, not the person.</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h4 style="margin-top:0;color:var(--queens-blue)">D) Author: apply suggestions & merge</h4>
+          <ol>
+            <li>Open your PR → <b>Conversation</b> and <b>Files changed</b> tabs → read comments.</li>
+            <li>For suggestion blocks, click <b>Apply suggestion</b> (or <b>Add suggestion to batch</b>) → <b>Commit</b>.</li>
+            <li>Make any extra edits and commit again (web editor is fine).</li>
+            <li>When happy, click <b>Merge pull request</b> → <b>Confirm</b> → <b>Delete branch</b>. Pages redeploys automatically.</li>
+          </ol>
+        </div>
+
+        <h4 style="color:var(--queens-blue);margin-top:1rem">E) Detailed checklist (leave ≥1 comment per line)</h4>
+        <ul class="checklist">
+          <li><b>Functionality</b> — open the live URL; click every link; check images load (use DevTools Network tab if needed).</li>
+          <li><b>Clarity</b> — headings in plain English; the first paragraph explains who/what/where; avoid jargon.</li>
+          <li><b>Structure</b> — page uses <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, sections in logical order; only one <code>&lt;h1&gt;</code>; section titles use <code>&lt;h2&gt;</code>.</li>
+          <li><b>Maintainability</b> — colors, fonts, spacing set in <code>style.css</code> (not inline); repeated styles extracted to a class.</li>
+          <li><b>Performance</b> — hero photos ~200–400 KB; use width/height attrs; remove unused images or CSS.</li>
+          <li><b>Security / Privacy</b> — no personal phone/address unless intentional; external links use trustworthy domains.</li>
+          <li><b>Documentation</b> — README explains how to update and where to put images; commit messages describe the <em>why</em>.</li>
+          <li><b>Accessibility</b> — every <code>&lt;img&gt;</code> has <code>alt</code>; color contrast OK (Queen’s blue on white is good); link text is meaningful (not just “click here”).</li>
+        </ul>
+
+        <h4 style="color:var(--queens-blue)">G) Issue template — quick one-off (fastest)</h4>
         <ol>
-          <li>Edit a file, choose “Create a new branch” → name it <code>feature/about-update</code>.</li>
-          <li>Click <b>Propose changes</b> → <b>Create pull request</b>.</li>
-          <li>Review → Merge → Delete branch.</li>
+          <li>Go to partner’s repo → <b>Issues</b> → <b>New issue</b>.</li>
+          <li>Paste the template below into the description → fill in URLs → <b>Submit new issue</b>.</li>
         </ol>
-        <details><summary>Tips & fixes</summary>
-          <ul>
-            <li><b>Merge blocked?</b> Confirm PR targets <code>main</code>.</li>
-            <li><b>Conflict?</b> Use GitHub’s Resolve conflicts editor.</li>
-          </ul>
-        </details>
+
+        <h4 style="color:var(--queens-blue)">H) Issue template — reusable (optional, owner sets up once)</h4>
+        <ol>
+          <li>In your repo, click <b>Add file → Create new file</b>.</li>
+          <li>Name it <code>.github/ISSUE_TEMPLATE/peer-review.md</code> (create folders exactly as shown).</li>
+          <li>Paste the front‑matter and body below → <b>Commit directly to main</b>.</li>
+          <li>Now reviewers will see a <b>Peer Review</b> template when they click <b>New issue</b>.</li>
+        </ol>
+
+        <h5 style="color:var(--queens-blue);margin-top:.5rem">Reusable issue template file: <code>.github/ISSUE_TEMPLATE/peer-review.md</code></h5>
+        <pre><code>---
+name: Peer Review
+about: Structured checklist for reviewing a classmate's Queen’s Student Page
+title: "Peer Review: &lt;your name&gt; reviewing &lt;partner username&gt;"
+labels: peer-review
+assignees: ''
+---
+
+**Live URL:** https://&lt;user&gt;.github.io/queens-student-page/
+**Repo:** https://github.com/&lt;user&gt;/queens-student-page
+
+### 1) Functionality
+- [ ] Page loads; links & images work.
+
+### 2) Clarity / Content
+- [ ] Clear headings; intro explains who/what.
+
+### 3) Accessibility
+- [ ] All images have alt text; heading levels are logical.
+
+### 4) Style / CSS
+- [ ] Consistent colors; styles in style.css.
+
+### 5) Performance
+- [ ] Images are not huge; widths/heights set.
+
+### 6) Documentation
+- [ ] README tells how to update; commit messages are descriptive.
+
+### 7) Concrete Suggestion (include code if helpful)
+
+**Summary (3 sentences):** Biggest win / Quick fix / Nice-to-have
+</code></pre>
       </section>
+      
     </main>
 
     <footer>
-      © Queen’s University — School of Computing — Student Page Tutorial. Built with GitHub Pages.
+      © Queen’s University — Student Page Tutorial. Built with GitHub Pages.
     </footer>
   </body>
 </html>
