@@ -358,5 +358,18 @@ assignees: ''
     <footer>
       © Queen’s University — Student Page Tutorial. Built with GitHub Pages.
     </footer>
+
+    <script>
+      (function () {
+        document.querySelectorAll('pre > code').forEach(code => {
+          // Wrap encoded HTML comments like &lt;!-- ... --&gt; with a span for styling
+          code.innerHTML = code.innerHTML.replace(
+            /&lt;!--([\s\S]*?)--&gt;/g,
+            '<span class="hl-comment">&lt;!--$1--&gt;</span>'
+          );
+        });
+      })();
+    </script>
+    
   </body>
 </html>
