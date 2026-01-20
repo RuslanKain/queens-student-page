@@ -1,6 +1,6 @@
 # Queen's School of Computing Student Page
 
-Welcome to the CISC 121 student page homework assignment! This repository contains a web-based student card that you will customize, deploy, and peer review.
+Welcome to the CISC 121 student page bonus mark homework! This repository contains a web-based student card that you will customize, deploy, and peer review.
 
 ## 📚 Overview
 
@@ -128,4 +128,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Good luck with your assignment! 🎓 Go Gaels!**
+**Good luck with your Homework! 🎓 Go Gaels!**
