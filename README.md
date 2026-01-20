@@ -1,131 +1,146 @@
-# Queen's School of Computing Student Page
+# Queen's School of Computing Student Page 🎓
 
-Welcome to the CISC 121 student page bonus mark homework! This repository contains a web-based student card that you will customize, deploy, and peer review.
+Welcome to your CISC 121 student webpage repository! This guide will help you understand and navigate this GitHub repository, especially if this is your first time using GitHub.
 
-## 📚 Overview
+## 📖 What is This Repository?
 
-This is a hands-on assignment where you'll:
-1. **Customize** your own Queen's student webpage
-2. **Deploy** it using GitHub Pages
-3. **Review** a classmate's webpage
-4. **Implement** feedback from your peer review
+This repository is a **starter template** for creating your own personal Queen's Computing student webpage. Think of it as a pre-built foundation that you can customize and make your own.
+
+**📍 Where are the full homework instructions?**  
+The complete tutorial and assignment instructions are in the `index.html` file. Once you deploy your site to GitHub Pages (explained in the tutorial), you'll see a beautiful, easy-to-follow guide on your live website.
+
+**❓ Why fork this repository instead of starting from scratch?**
+- **Saves time**: You get a working template with Queen's branding already set up
+- **Ensures consistency**: Everyone starts with the same structure, making peer reviews easier
+- **Reduces errors**: The basic HTML structure is already correct
+- **Beginner-friendly**: You can focus on personalizing content rather than building from zero
 
 ## 🗂️ Repository Structure
 
-```
-queens-student-page/
-├── index.html          # Main HTML file - customize this with your info
-├── README.md           # This file - project documentation
-└── LICENSE             # MIT License
-```
+Here's what each file in this repository does:
 
-## 🚀 Getting Started
+| File | Purpose | Will You Edit This? |
+|------|---------|---------------------|
+| `index.html` | The main tutorial webpage with full homework instructions and your personal page template | ✅ Yes - this is where you'll add your information |
+| `README.md` | This guide - helps you navigate and understand the repository | ℹ️ Optional - you can update it with your own notes |
+| `LICENSE` | MIT License information (makes this project open source) | ❌ No - leave this as-is |
 
-### Step 1: Fork This Repository
-1. Click the "Fork" button at the top right of this page
-2. This creates your own copy of the repository
+**What you'll be doing:** Mainly editing `index.html` to add your name, photo, interests, and contact information. The file itself contains detailed comments showing you exactly where to make changes!
 
-### Step 2: Customize Your Student Page
-1. Edit the `index.html` file
-2. Update the following sections with your information:
-   - Your name
-   - Student number
-   - Program and year
-   - Contact information
-   - About me section
-   - Any other personal details you'd like to share
+## 🎯 GitHub Basics for Beginners
 
-### Step 3: Deploy to GitHub Pages
-1. Go to your repository's **Settings**
-2. Navigate to **Pages** (in the left sidebar)
-3. Under **Source**, select **Deploy from a branch**
-4. Select the **main** branch and **/ (root)** folder
-5. Click **Save**
-6. Wait a few minutes for deployment
-7. Your site will be live at: `https://[your-username].github.io/queens-student-page/`
+New to GitHub? Here are the key terms you'll need to know:
 
-### Step 4: Peer Review Process
-You will be assigned a partner to review. Complete the following:
+### 🗃️ Repository (Repo)
+A **repository** is like a project folder that stores all your code, files, and their history. Think of it as a special folder that tracks every change you make over time.
 
-#### Reviewing Your Partner's Website:
-1. Visit your partner's deployed site and GitHub repository
-2. Provide constructive feedback using **one** of these methods:
-   - **Option A (Recommended)**: Create a Pull Request with suggested changes
-   - **Option B**: Open an Issue using the provided issue template
-3. Your review should include:
-   - What works well
-   - Suggestions for improvement (design, content, accessibility, etc.)
-   - Any bugs or issues you notice
+### 🍴 Fork
+**Forking** creates your own personal copy of someone else's repository. When you fork this repo, you get your own version that you can edit without affecting the original.
 
-#### Implementing Feedback on Your Website:
-1. Review the feedback your partner provided
-2. Implement the suggested changes in your repository
-3. Commit and push your updates
-4. Document what you changed and why
+### 💾 Commit
+A **commit** is like saving a checkpoint in a video game. It records a snapshot of your changes with a description of what you did. You can always go back to any previous commit.
 
-## 📝 What to Submit (Deliverables)
+### ⬆️ Push
+**Pushing** uploads your local changes (commits) to GitHub's servers so they're saved online and visible to others.
 
-Submit a **single PDF** to OnQ containing all of the following:
+### 🔀 Pull Request (PR)
+A **pull request** is how you propose changes to someone else's repository. In this homework, you'll create a PR to suggest improvements to your partner's webpage.
 
-### 1. Live URL
-- **Link to your deployed site** (e.g., `https://your-username.github.io/queens-student-page/`)
-- This confirms your site launched successfully
+### 🐛 Issue
+An **issue** is a way to report problems, ask questions, or suggest improvements. Think of it as a discussion thread attached to a repository.
 
-### 2. Repository Link
-- **Link to your GitHub repository** with all your code
-- (e.g., `https://github.com/your-username/queens-student-page`)
+### 🌐 GitHub Pages
+**GitHub Pages** is a free service that turns your repository into a live website. Your HTML file becomes a real webpage anyone can visit!
 
-### 3. Evidence of Your Review for Your Partner's Website
-Include **both** of the following:
-- **Direct URL** of your review:
-  - If you reviewed via Pull Request: `https://github.com/partner-username/queens-student-page/pull/3`
-  - If you used an Issue: `https://github.com/partner-username/queens-student-page/issues/5`
-- **Two screenshot images** showing your comments/review
+### 🌿 Branch
+A **branch** is an alternate version of your code. The `main` branch is your primary version, but you can create other branches to experiment without affecting the main version.
 
-### 4. Evidence of Implementation from Your Partner's Review
-Provide a written description that includes:
-- **What changes your partner recommended**
-- **How you implemented those changes** in your repository
-- Include commit links or specific examples if applicable
+## 🚀 Quick Start Guide
 
-## 💡 Tips for Success
+Ready to get started? Here's the simple path:
 
-- **Customize thoroughly**: Make the page your own!
-- **Test your deployment**: Always check your live site before submitting
-- **Give constructive feedback**: Be specific and helpful in your peer review
-- **Document your changes**: Keep track of what you modify based on feedback
-- **Ask for help**: If you get stuck, reach out to your instructor or classmates
+1. **Fork this repository**
+   - Click the "Fork" button at the top right of this GitHub page
+   - This creates your personal copy
 
-## 🛠️ Troubleshooting
+2. **Enable GitHub Pages to deploy your site**
+   - Go to Settings, then Pages
+   - Select "Deploy from a branch" and choose `main` branch
+   - Your site will be live in a few minutes!
 
-### My GitHub Pages site isn't loading
-- Check that you've enabled GitHub Pages in Settings → Pages
-- Ensure you selected the correct branch (usually `main`)
-- Wait 5-10 minutes after enabling - deployment takes time
-- Check the Actions tab for any deployment errors
+3. **Visit your deployed site for full instructions**
+   - Your URL will be: `https://[your-username].github.io/queens-student-page/`
+   - The tutorial website contains step-by-step instructions for everything
 
-### I can't find my partner's repository
-- Ensure you have the correct GitHub username
-- The repository should be named `queens-student-page`
+4. **Follow the tutorial on your live website**
+   - It will guide you through customizing your page
+   - Explain how to complete the peer review
+   - Show you exactly what to submit
 
-### How do I create a Pull Request?
-1. Go to your partner's repository
-2. Click "Fork" to create your copy
-3. Make changes in your fork
-4. Click "Pull requests" → "New pull request"
-5. Add your review comments and submit
+## 🧭 Navigation Help
 
-## 📖 Resources
+### Finding Different Sections
+- **Code tab**: View and edit all your files (this is where you'll spend most of your time)
+- **Issues tab**: See questions or suggestions (useful for peer reviews)
+- **Pull requests tab**: Where you'll review changes and collaborate
+- **Settings tab**: Configure GitHub Pages and other repository settings
+- **Actions tab**: See deployment status (automatic - GitHub builds your site here)
 
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [How to Create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-- [How to Create an Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
-- [Markdown Guide](https://www.markdownguide.org/)
+### Viewing Files
+1. Click the **Code** tab (default view)
+2. Click on any filename to view it
+3. Click the pencil icon (✏️) to edit directly in your browser
+
+### Editing Files
+**Easy way (in browser):**
+1. Click on the file you want to edit
+2. Click the pencil icon (✏️) in the top right
+3. Make your changes
+4. Scroll down, add a commit message (describe what you changed)
+5. Click "Commit changes"
+
+**Advanced way (optional):**
+- Clone the repository to your computer using Git
+- Edit files in VS Code or another editor
+- Commit and push changes back to GitHub
+
+### Accessing Settings for GitHub Pages
+1. Click the **Settings** tab (at the top of your repository)
+2. Look in the left sidebar for **Pages**
+3. Configure your deployment settings here
+4. Your live URL will appear at the top once deployed
+
+## 💬 Getting Help
+
+### Stuck on something?
+- **Ask your instructor**: They're here to help, especially with GitHub questions!
+- **Check the tutorial**: The `index.html` file (once deployed) has detailed explanations
+- **Read GitHub docs**: [GitHub's official documentation](https://docs.github.com) is beginner-friendly
+- **Ask a classmate**: Your peers are learning too - help each other!
+
+### Useful Resources
+- [GitHub's "Hello World" Guide](https://docs.github.com/en/get-started/quickstart/hello-world) - Great first tutorial
+- [GitHub Pages Documentation](https://docs.github.com/en/pages) - How to deploy your site
+- [HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML) - Understanding HTML
+- [GitHub Student Developer Pack](https://education.github.com/pack) - Free tools and resources for students
+
+### Common Questions
+
+**Q: What if I make a mistake?**  
+A: Don't worry! Every commit is saved, so you can always view previous versions and restore them. Check the commit history by clicking on the commit count (e.g., "15 commits") above your file list.
+
+**Q: Can I delete my fork and start over?**  
+A: Yes! Go to Settings → scroll all the way down → click "Delete this repository". Then fork again from the original.
+
+**Q: What if my deployed site doesn't update?**  
+A: GitHub Pages can take 1-5 minutes to update. Check the Actions tab to see if the deployment is still running. Clear your browser cache if it still shows old content.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details. This means you're free to use, modify, and share this code!
 
 ---
 
-**Good luck with your Homework! 🎓 Go Gaels!**
+**Welcome to GitHub! You've got this! 🎓 Go Gaels! 💙💛**
+
+*Need more help? The full tutorial with screenshots and step-by-step instructions is waiting for you at your deployed GitHub Pages site.*
