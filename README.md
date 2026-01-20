@@ -64,7 +64,7 @@ Ready to get started? Here's the simple path:
    - This creates your personal copy
 
 2. **Enable GitHub Pages to deploy your site**
-   - Go to Settings → Pages
+   - Go to Settings, then Pages
    - Select "Deploy from a branch" and choose `main` branch
    - Your site will be live in a few minutes!
 
@@ -108,7 +108,7 @@ Ready to get started? Here's the simple path:
 1. Click the **Settings** tab (at the top of your repository)
 2. Look in the left sidebar for **Pages**
 3. Configure your deployment settings here
-4. Your live URL will appear at the top once deployed ✅
+4. Your live URL will appear at the top once deployed
 
 ## 💬 Getting Help
 
